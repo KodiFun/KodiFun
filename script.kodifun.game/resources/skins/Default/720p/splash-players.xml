@@ -1,0 +1,84 @@
+<window id="30200">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+	<!-- ============================================= -->
+	<!--   S C R E E N       B A C K G R O U N D       -->          
+	<!-- ============================================= -->              
+  
+	<!-- Copy of CommonBackground -->
+	<control type="image">
+		<description>background image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<!-- <width>1280</width>
+		<height>720</height> -->
+		<texture>bg2.png</texture>
+	</control>
+	<control type="group" id="32201">
+		<description>Number of players</description>
+		<posx>600</posx>
+		<posy>250</posy>
+		<width>600</width>
+		<height>500</height>
+		<itemgap>4</itemgap>
+		<onleft>251</onleft>
+		<onright>251</onright>
+		<ondown>9001</ondown>
+		<onup>9001</onup>
+	<control type="label" id="32202">
+		<description>Title:number of players</description>
+		<left>10</left>
+		<width>500</width>
+		<visible>true</visible>
+		<align>left</align>
+		<scroll>false</scroll>
+		<label>[B]$ADDON[script.kodifun.game 32202][/B]</label>
+		<info>[B]$ADDON[script.kodifun.game 32202][/B]</info>
+		<number></number>
+		<angle>0</angle>
+		<haspath>false</haspath>
+		<font>font16</font>
+		<textcolor>FFFF0000</textcolor>
+		<shadowcolor>ff000000</shadowcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>50</scrollspeed>
+		<scrollsuffix> - </scrollsuffix>
+		</control>
+		<control type="edit" id="32203">
+			<description>edit:number of players</description>
+			<left>0</left>
+			<posy>50</posy>
+			<width>500</width>
+			<visible>true</visible>
+			<aligny>center</aligny>
+			<label></label>
+			<hinttext>[B]$ADDON[script.kodifun.game 32203][/B]</hinttext>
+			<font>font14</font>
+			<textoffsetx>10</textoffsetx>
+			<textcolor>FFB2D4F5</textcolor>
+			<disabledcolor>FF000000</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+		<control type="button" id="32204">
+			<description>Next button</description>
+			<visible>true</visible>
+			<left>325</left>
+			<width>180</width>
+			<posy>200</posy>
+			<label>[B]$ADDON[script.kodifun.game 32204][/B]</label>
+			<align>Center</align>
+		</control>
+		<control type="button" id="32034">
+			<description>Cancel button</description>
+			<posy>200</posy>
+			<left>0</left>
+			<width>180</width>
+			<label>[B]$ADDON[script.kodifun.game 32034][/B]</label>
+		</control>
+       </control>
+	</controls>
+</window>

@@ -1,0 +1,498 @@
+<window id="30012">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+	<!-- ============================================= -->
+	<!--   S C R E E N       B A C K G R O U N D       -->
+	<!-- ============================================= -->
+	<!-- Copy of CommonBackground -->
+	<control type="image">
+		<description>background image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<texture>bgWhite.png</texture>
+	</control>
+	<control type="image" id="32048">
+		<description>left dice 1</description>
+		<height>450</height>
+		<width>400</width>
+		<top>185</top>
+		<left>250</left>
+		<texture>\set1\l1.png</texture>
+	</control>
+	<control type="image" id="32047">
+		<description>right dice 2</description>
+		<height>450</height>
+		<width>400</width>
+		<top>185</top>
+		<left>650</left>
+		<texture>\set1\r6.png</texture>
+	</control>
+<!-- 	<control type="image">
+		<description>background image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<texture>debuggrid720.png</texture>
+	</control> -->
+	<control type="label" id="32045">
+		<description>Left Dice2</description>
+		<left>675</left>
+		<posy>75</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32045][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32046">
+		<description>Left Dice 1</description>
+		<left>575</left>
+		<posy>75</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32046][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32090">
+		<description>dice 3</description>
+		<left>575</left>
+		<posy>100</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32090][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32091">
+		<description>dice 4</description>
+		<left>675</left>
+		<posy>100</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32091][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32092">
+		<description>player</description>
+		<left>575</left>
+		<posy>125</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32092][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32093">
+		<description>Number of players</description>
+		<left>675</left>
+		<posy>125</posy>
+		<width>100</width>
+		<height>20</height>
+		<visible>true</visible>
+		<aligny>left</aligny>
+		<label>[B]$ADDON[script.kodifun.game 32093][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="label" id="32094">
+		<description>Assignment</description>
+		<left>250</left>
+		<posy>0</posy>
+		<top>225</top>
+		<width>800</width>
+		<height>20</height>
+		<visible>true</visible>
+		<align>center</align>
+		<label>[B]$ADDON[script.kodifun.game 32094][/B]</label>
+		<onclick>Skin.SetNumeric(0)</onclick>
+		<hinttext></hinttext>
+		<font>font14</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>FFB2D4F5</textcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<invalidcolor>FFFFFFFF</invalidcolor>
+	</control>
+	<control type="group" id="32300">
+		<description>Player 1</description>
+		<top>50</top>
+		<left>50</left>
+		<width>650</width>
+		<height>350</height>
+		<itemgap>4</itemgap>
+		<onleft>251</onleft>
+		<onright>251</onright>
+		<ondown>9001</ondown>
+		<onup>9001</onup>
+		<align>center</align>
+	<control type="image" id="32306">
+		<description>player 1 image</description>
+		<posx>200</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>150</height>
+		<texture>01PlayerImage.png</texture>
+	</control>
+		<control type="label" id="32050">
+			<description>Player 1 label</description>
+			<width>250</width>
+			<height>50</height>
+			<visible>true</visible>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[B]$ADDON[script.kodifun.game 32300][/B]</label>
+			<info>[B]$ADDON[script.kodifun.game 32300][/B]</info>
+			<number></number>
+			<angle>0</angle>
+			<haspath>false</haspath>
+			<font>font14</font>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>ff000000</shadowcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<scrollspeed>50</scrollspeed>
+			<scrollsuffix> - </scrollsuffix>
+	</control>
+		<control type="label" id="32301">
+			<description>player name label</description>
+			<left>0</left>
+			<posy>50</posy>
+			<width>500</width>
+			<height>20</height>
+			<visible>true</visible>
+			<aligny>center</aligny>
+			<label>[B]$ADDON[script.kodifun.game 32060][/B]</label>
+			<hinttext></hinttext>
+			<font>font14</font>
+			<textoffsetx>10</textoffsetx>
+			<textcolor>FFB2D4F5</textcolor>
+			<disabledcolor>FF000000</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+		<control type="label" id="32302">
+				<description>PlayerAge</description>
+				<left>0</left>
+				<posy>75</posy>
+				<width>500</width>
+				<height>20</height>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>[B]$ADDON[script.kodifun.game 32061][/B] 41</label>
+				<onclick>Skin.SetNumeric(0)</onclick>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+			</control>
+	</control>
+	<control type="group" id="32320">
+			<description>Player 2</description>
+			<top>50</top>
+			<left>1100</left>
+			<width>650</width>
+			<height>350</height>
+			<itemgap>4</itemgap>
+			<onleft>251</onleft>
+			<onright>251</onright>
+			<ondown>9001</ondown>
+			<onup>9001</onup>
+			<align>center</align>
+		<control type="image" id="32326">
+		<description>player 2 image</description>
+		<posx>-350</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>150</height>
+		<texture>02PlayerImage.png</texture>
+	</control>
+		<control type="label" id="32050">
+			<description>Player 2 label</description>
+			<width>250</width>
+			<height>50</height>
+			<visible>true</visible>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[B]$ADDON[script.kodifun.game 32320][/B]</label>
+			<info>[B]$ADDON[script.kodifun.game 32320][/B]</info>
+			<number></number>
+			<angle>0</angle>
+			<haspath>false</haspath>
+			<font>font14</font>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>ff000000</shadowcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<scrollspeed>50</scrollspeed>
+			<scrollsuffix> - </scrollsuffix>
+	</control>
+		<control type="label" id="32321">
+			<description>player2 name label</description>
+			<left>0</left>
+			<posy>50</posy>
+			<width>500</width>
+			<height>20</height>
+			<visible>true</visible>
+			<aligny>center</aligny>
+			<label></label>
+			<hinttext></hinttext>
+			<font>font14</font>
+			<textoffsetx>10</textoffsetx>
+			<textcolor>FFB2D4F5</textcolor>
+			<disabledcolor>FF000000</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+		<control type="label" id="32322">
+				<description>Player 2 Age</description>
+				<left>0</left>
+				<posy>75</posy>
+				<width>500</width>
+				<height>20</height>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label></label>
+				<onclick>Skin.SetNumeric(0)</onclick>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+			</control>
+	</control>
+	<control type="group" id="32340">
+			<description>Player 3</description>
+			<top>450</top>
+			<left>50</left>
+			<width>650</width>
+			<height>350</height>
+			<itemgap>4</itemgap>
+			<onleft>251</onleft>
+			<onright>251</onright>
+			<ondown>9001</ondown>
+			<onup>9001</onup>
+			<align>center</align>
+		<control type="image" id="32346">
+		<description>player 3 image</description>
+		<posx>50</posx>
+		<posy>-50</posy>
+		<width>225</width>
+		<height>300</height>
+		<texture>13PlayerImage.png</texture>
+	</control>
+		<control type="label" id="32050">
+			<description>Player 3 label</description>
+			<width>250</width>
+			<height>50</height>
+			<visible>true</visible>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[B]$ADDON[script.kodifun.game 32340][/B]</label>
+			<info>[B]$ADDON[script.kodifun.game 32340][/B]</info>
+			<number></number>
+			<angle>0</angle>
+			<haspath>false</haspath>
+			<font>font14</font>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>ff000000</shadowcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<scrollspeed>50</scrollspeed>
+			<scrollsuffix> - </scrollsuffix>
+	</control>
+		<control type="label" id="32341">
+			<description>player name label</description>
+			<left>0</left>
+			<posy>50</posy>
+			<width>500</width>
+			<height>20</height>
+			<visible>true</visible>
+			<aligny>center</aligny>
+			<label>[B]$ADDON[script.kodifun.game 32060][/B]</label>
+			<hinttext></hinttext>
+			<font>font14</font>
+			<textoffsetx>10</textoffsetx>
+			<textcolor>FFB2D4F5</textcolor>
+			<disabledcolor>FF000000</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+		<control type="label" id="32342">
+				<description>PlayerAge</description>
+				<left>0</left>
+				<posy>75</posy>
+				<width>500</width>
+				<height>20</height>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>[B]$ADDON[script.kodifun.game 32061][/B] 41</label>
+				<onclick>Skin.SetNumeric(0)</onclick>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+			</control>
+	</control>
+	<control type="group" id="32360">
+			<description>Player 4</description>
+			<top>450</top>
+			<left>1100</left>
+			<width>650</width>
+			<height>350</height>
+			<itemgap>4</itemgap>
+			<onleft>251</onleft>
+			<onright>251</onright>
+			<ondown>9001</ondown>
+			<onup>9001</onup>
+			<align>center</align>
+		<control type="image" id="32366">
+		<description>player 4 image</description>
+		<posx>-125</posx>
+		<posy>-50</posy>
+		<width>225</width>
+		<height>300</height>
+		<texture>14PlayerImage.png</texture>
+	</control>
+		<control type="label" id="32050">
+			<description>Player 4 label</description>
+			<width>250</width>
+			<height>50</height>
+			<visible>true</visible>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[B]$ADDON[script.kodifun.game 32360][/B]</label>
+			<info>[B]$ADDON[script.kodifun.game 32360][/B]</info>
+			<number></number>
+			<angle>0</angle>
+			<haspath>false</haspath>
+			<font>font14</font>
+			<textcolor>FFFF0000</textcolor>
+			<shadowcolor>FFD70000</shadowcolor>
+			<wrapmultiline>false</wrapmultiline>
+			<scrollspeed>50</scrollspeed>
+			<scrollsuffix> - </scrollsuffix>
+	</control>
+		<control type="label" id="32361">
+			<description>player 4 name label</description>
+			<left>0</left>
+			<posy>50</posy>
+			<width>500</width>
+			<height>20</height>
+			<visible>true</visible>
+			<aligny>center</aligny>
+			<label>[B]$ADDON[script.kodifun.game 32060][/B]</label>
+			<hinttext></hinttext>
+			<font>font14</font>
+			<textoffsetx>10</textoffsetx>
+			<textcolor>FFB2D4F5</textcolor>
+			<disabledcolor>FF000000</disabledcolor>
+			<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+		<control type="label" id="32362">
+				<description>PlayerAge</description>
+				<left>0</left>
+				<posy>75</posy>
+				<width>500</width>
+				<height>20</height>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>[B]$ADDON[script.kodifun.game 32061][/B] 41</label>
+				<onclick>Skin.SetNumeric(0)</onclick>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+		</control>
+	</control>
+<!-- 	<control type="image">
+		<description>background image</description>
+		<height>288</height>
+		<width>216</width>
+		<posx>150</posx>
+		<posy>400</posy>
+		<texture>James.png</texture>
+	</control>
+ -->
+<!-- 	<control type="image">
+		<description>background image</description>
+		<height>288</height>
+		<width>216</width>
+		<posx>950</posx>
+		<posy>400</posy>
+		<texture>James0.png</texture>
+	</control> -->
+	<control type="button" id=32034>
+			<left>1100</left>
+			<width>100</width>
+			<posy>0</posy>
+			<label>[B]$ADDON[script.kodifun.game 32038][/B]</label>
+			<font>font14</font>
+			<textcolor>FFB2D4F5</textcolor>
+			<align>center</align>
+		</control>
+			<control type="button" id=32800>
+			<left>0</left>
+			<width>100</width>
+			<posy>0</posy>
+			<label>[B]$ADDON[script.kodifun.game 32038][/B]</label>
+			<font>font14</font>
+			<textcolor>FFB2D4F5</textcolor>
+			<align>center</align>
+		</control>
+		<control type="button" id=32039>
+			<posy>600</posy>
+			<left>440</left>
+			<width>400</width>
+			<height>100</height>
+			<label>[B]$ADDON[script.kodifun.game 32039][/B]</label>
+			<font>font20</font>
+			<textcolor>FFB2D4F5</textcolor>
+			<align>center</align>
+       </control> 
+	</controls>
+</window>

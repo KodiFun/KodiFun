@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="32010">
+		<setting label="32011" type="text"   id="username" default=""/>
+		<setting label="32012" type="text"   id="password" option="hidden"  enable="!eq(-1,)" default=""/>
+		<setting label="32400" type="slider" id="limit" subsetting="true" default="2" range="1,1,4" option="int" />
+		<setting type="sep"/>
+		<setting id="32014" type="bool" label="32013" default="false"/>
+	</category>
+    <category label="32030">
+        <setting label="32032" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+    </category>
+	<category label="32040">
+		<setting id="parental_code" type="text" label="32041" default="9876"/>
+		<setting id="parental_control" type="bool" label="32042" default="true"/>
+		<setting id="resource3" type="text" label="32043" default="123456789M3"/>
+		<setting id="resource4" type="text" label="32044" default="123456789M4"/>
+		<setting id="Url" type="text" label="32045" default="www.ple.be"/>
+		<setting id="enu" type="enum" label="32046" values="5|10|15|20|25|30" default="3"/>
+		<setting id="32100" type="enum" label="32100" values="5|10|15|20|25|30" default="3"/>
+		<setting id="nrplayers" type="text" label="32041" default="102"/>
+	</category>
+	<category label="32300">
+		<setting id="32301" type="text" label="32301" default="Kyra"/>
+		<setting id="32302" type="text" label="32302" default="41"/>
+		<setting id="32303" type="bool" label="32303" default="true"/>
+		<setting id="32304" type="bool" label="32304" default="true"/>
+		<setting id="32305" type="bool" label="32305" default="true"/>
+		<setting id="32306" type="enum" label="32306" values="5|10|15|20|25|30" default="3"/>
+		<setting id="32307" type="enum" label="32307" values="5|10|15|20|25|30" default="3"/>
+		<setting id="32308" type="text" label="32308" default="102"/>
+	</category>
+	<category label="32320">
+		<setting id="parental_code" type="text" label="32041" default="9876"/>
+		<setting id="parental_control" type="bool" label="32042" default="true"/>
+		<setting id="resource3" type="text" label="32043" default="123456789M3"/>
+		<setting id="resource4" type="text" label="32044" default="123456789M4"/>
+		<setting id="Url" type="text" label="32045" default="www.ple.be"/>
+		<setting id="enu" type="enum" label="32046" values="5|10|15|20|25|30" default="3"/>
+		<setting id="32100" type="enum" label="32100" values="5|10|15|20|25|30" default="3"/>
+		<setting id="nrplayers" type="text" label="32041" default="102"/>
+	</category>
+</settings>

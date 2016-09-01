@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.kodifun.game" name="KodiFun" version="0.0.3" provider-name="KodiFun">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">KodiFun MemoryGame</summary>
+		<description lang="en">KodiFun MemoryGame</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<forum>https://github.com/KodiFun/KodiFun</forum>
+		<source>https://github.com/KodiFun/KodiFun</source>
+		<email>berichtencentrum@mail.com</email>
+	</extension>
+</addon>
