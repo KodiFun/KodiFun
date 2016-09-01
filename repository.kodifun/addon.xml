@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<addon id="repository.kodifun" name="KodiFun Repo" version="2.0.1" provider-name="KodiFun">
+<addon id="repository.kodifun" name="KodiFun Repo" version="2.0.2" provider-name="KodiFun">
 	<extension point="xbmc.addon.repository" name="KodiFun Repository">
 		<info compressed="false">https://raw.githubusercontent.com/KodiFun/KodiFun/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/KodiFun/KodiFun/master/addons.xml.md5</checksum>
