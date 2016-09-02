@@ -8,8 +8,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">KodiFun MemoryGame</summary>
-		<description lang="en">KodiFun MemoryGame</description>
+		<summary lang="en">KodiFun dicegame</summary>
+		<description lang="en">KodiFun dicegame for more games visit www.18play.be</description>
 		<license>GNU General Public License, v2</license>
 		<language></language>
 		<forum>https://github.com/KodiFun/KodiFun</forum>

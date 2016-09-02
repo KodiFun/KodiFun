@@ -7,7 +7,6 @@ import sys
 import locale
 # import test
 import dialog
-xbmc.log("load addon.py")
 
 __plugin__ = 'script.kodifun.game'
 __author__ = 'KodiFun'
@@ -25,17 +24,18 @@ __themepath__ = os.path.join(__apath__,'resources','skins',__theme__,'720p')
 
 parental_code     = __settings__.getSetting("32000")
 parental_control  = __settings__.getSetting("32001")
-
+__bLogging__  =__settings__.getSetting("32004")
+xbmc.log("Debugging = " + str(__bLogging__))
 sys.path.insert(0, os.path.join(__apath__, 'resources', 'src'))
 
 xbmc.log(__apath__)
 
 if parental_control:
-	xbmc.log("With parental control")
+	if __bLogging__ == "true":xbmc.log("With parental control")
 	#START WITH NUMBER OF PLAYERS WINDOW
 	mydisplay=dialog.KodifunLogin("splash-players.xml" , __apath__,'Default','720p')
 	mydisplay.doModal()
-	xbmc.log("SPY  =  " + str(mydisplay.ActionID))
+	if __bLogging__ == "true":xbmc.log("SPY  =  " + str(mydisplay.ActionID))
 	if (mydisplay.ActionID == 32204):
 		mydisplay=dialog.KodifunLogin("splash-playersdata.xml" , __apath__,'Default','720p')
 		mydisplay.doModal()
@@ -44,5 +44,5 @@ if parental_control:
 		mydisplay.doModal()
 	del mydisplay
 else:
-	xbmc.log("Without parental control")
+	if __bLogging__ == "true":xbmc.log("Without parental control")
 	pass

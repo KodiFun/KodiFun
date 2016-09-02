@@ -43,7 +43,7 @@
 		<posy>75</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32045][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -60,7 +60,7 @@
 		<posy>75</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32046][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -77,7 +77,7 @@
 		<posy>100</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32090][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -94,7 +94,7 @@
 		<posy>100</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32091][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -111,7 +111,7 @@
 		<posy>125</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32092][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -128,7 +128,7 @@
 		<posy>125</posy>
 		<width>100</width>
 		<height>20</height>
-		<visible>true</visible>
+		<visible>$ADDON[script.kodifun.game 32004]</visible>
 		<aligny>left</aligny>
 		<label>[B]$ADDON[script.kodifun.game 32093][/B]</label>
 		<onclick>Skin.SetNumeric(0)</onclick>
@@ -475,7 +475,7 @@
 			<textcolor>FFB2D4F5</textcolor>
 			<align>center</align>
 		</control>
-			<control type="button" id=32800>
+<!-- 		<control type="button" id=32800>
 			<left>0</left>
 			<width>100</width>
 			<posy>0</posy>
@@ -483,7 +483,7 @@
 			<font>font14</font>
 			<textcolor>FFB2D4F5</textcolor>
 			<align>center</align>
-		</control>
+		</control> -->
 		<control type="button" id=32039>
 			<posy>600</posy>
 			<left>440</left>

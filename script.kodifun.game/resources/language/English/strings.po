@@ -44,7 +44,7 @@ msgid "Number of players"
 msgstr ""
 
 msgctxt "#32004"
-msgid "Eperimental: Enable Inline Frames"
+msgid "Debugging"
 msgstr ""
 
 msgctxt "#32005"
@@ -224,7 +224,7 @@ msgid "06"
 msgstr ""
 
 msgctxt "#32094"
-msgid "{0} with {1}"
+msgid "Roll the dice to start the game"
 msgstr ""
 
 msgctxt "#32101"

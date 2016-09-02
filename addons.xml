@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-	<addon id="script.kodifun.game" name="A adult dicegame" version="0.0.3" provider-name="KodiFun">
+	<addon id="script.kodifun.game" name="A adult dicegame" version="0.0.4" provider-name="KodiFun">
 		<requires>
 			<import addon="xbmc.python" version="2.14.0"/>
 		</requires>

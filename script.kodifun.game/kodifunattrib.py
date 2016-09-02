@@ -6,8 +6,8 @@ __language__(30204)              # this will return localized string from resour
 #__settings__.getSetting( "foo" ) # this will return "foo" setting value 
 #__settings__.setSetting( "foo" ) # this will set "foo" setting value
 #__settings__.openSettings()      # this will open settings window
- 
-xbmc.log("KodiFun KodiFunAttrib loaded")
+__bLogging__  =__settings__.getSetting("32004")
+if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib loaded")
 
 def setAttribute():
 	"""Generate value for an attribute.
@@ -41,7 +41,7 @@ def makeDice2Assign():
 	return dice_assignments
 	
 def makeAttrib():
-	xbmc.log("KodiFun KodiFunAttrib makeAttrib loaded")
+	if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib makeAttrib loaded")
 	#---Make dictionary of attributes
 	attrib_dict = {}    
 	
@@ -57,7 +57,7 @@ def makeAttrib():
 	return attrib_dict
 	
 def makeAttribGender(gender,attrib_dict):
-	xbmc.log("KodiFun KodiFunAttrib makeAttribGender loaded")
+	if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib makeAttribGender loaded")
 	if gender == "female":
 		attrib_dict["gender"] = __language__(32064)
 		attrib_dict["feet1"] = __language__(32070)
@@ -77,9 +77,9 @@ def makeAttribGender(gender,attrib_dict):
 	return attrib_dict
 
 def printCharacter(self):
-	xbmc.log("KodiFun Character has the following attributes:")
+	if __bLogging__ == "true":xbmc.log("KodiFun Character has the following attributes:")
 	for key, value in self.attrib.iteritems() :
-		xbmc.log("KodiFun Key " + key + " : " + str(value))
+		if __bLogging__ == "true":xbmc.log("KodiFun Key " + key + " : " + str(value))
 
 def setPlayerData(self):
 	self.getControl(32060).setText(str(__settings__.getSetting(str(32301 + self.counter * self.offsetPlayerData))))
@@ -96,17 +96,17 @@ def setPlayerData(self):
 	pass
 
 def setGameBoard(self):
-	xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
+	if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
 	self.counter = 0
 	for self.counter in range(0,4):
-		xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
+		if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
 		self.getControl(32301 + self.counter * self.offsetPlayerData).setLabel(str(__settings__.getSetting(str(32301 + self.counter * self.offsetPlayerData))))
 		self.getControl(32302 + self.counter * self.offsetPlayerData).setLabel(str(__settings__.getSetting(str(32302 + self.counter * self.offsetPlayerData))))
 		if self.players > self.counter:
 			self.getControl(32300 + self.counter * self.offsetPlayerData).setVisible(1)
 		else:
-			xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
+			if __bLogging__ == "true":xbmc.log("KodiFun KodiFunAttrib setGameBoard Loaded" + str(self.players) + str(self.counter))
 			self.getControl(32300 + self.counter * self.offsetPlayerData).setVisible(0)
-		xbmc.log("KodiFun image selected is " + str(__settings__.getSetting(str(32303 + self.counter * self.offsetPlayerData))) + str(self.counter + 1) + "PlayerImage.png")
+		if __bLogging__ == "true":xbmc.log("KodiFun image selected is " + str(__settings__.getSetting(str(32303 + self.counter * self.offsetPlayerData))) + str(self.counter + 1) + "PlayerImage.png")
 		self.getControl(32306 + self.counter * self.offsetPlayerData).setImage(str(__settings__.getSetting(str(32303 + self.counter * self.offsetPlayerData))) + str(self.counter + 1) + "PlayerImage.png")
 	pass
