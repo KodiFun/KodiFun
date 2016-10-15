@@ -19,6 +19,44 @@
 			<email>berichtencentrum@mail.com</email>
 		</extension>
 	</addon>
+	<addon id="script.demo-boonex.dolphin" name="A demo browser for boonex" version="0.0.1" provider-name="KodiFun">
+		<requires>
+			<import addon="xbmc.python" version="2.14.0"/>
+		</requires>
+		<extension point="xbmc.python.script" library="addon.py">
+			<provides>executable</provides>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<platform>all</platform>
+			<summary lang="en">Connect to your favourite dolphin site</summary>
+			<description lang="en">Connect to your favourite dolphin site</description>
+			<disclaimer>Use at your own risk</disclaimer>
+			<license>GNU General Public License, v2</license>
+			<forum></forum>
+			<source></source>
+			<language>en</language>
+			<email>berichtencentrum@mail.com</email>
+		</extension>
+	</addon>
+	<addon id="script.demo-18play.dolphin" name="A demo browser for boonex" version="0.0.1" provider-name="KodiFun">
+		<requires>
+			<import addon="xbmc.python" version="2.14.0"/>
+		</requires>
+		<extension point="xbmc.python.script" library="addon.py">
+			<provides>executable</provides>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<platform>all</platform>
+			<summary lang="en">Connect to your favourite dolphin site</summary>
+			<description lang="en">Connect to your favourite dolphin site</description>
+			<disclaimer>Use at your own risk</disclaimer>
+			<license>GNU General Public License, v2</license>
+			<forum></forum>
+			<source></source>
+			<language>en</language>
+			<email>berichtencentrum@mail.com</email>
+		</extension>
+	</addon>
 	<addon id="repository.kodifun" name="KodiFun Repo" version="2.0.2" provider-name="KodiFun">
 		<extension point="xbmc.addon.repository" name="kodifun Repository">
 		<info compressed="false">https://raw.githubusercontent.com/KodiFun/KodiFun/master/addons.xml</info>
