@@ -19,7 +19,7 @@
 			<email>berichtencentrum@mail.com</email>
 		</extension>
 	</addon>
-	<addon id="script.demo-boonex.dolphin" name="A demo browser for boonex" version="0.0.1" provider-name="KodiFun">
+	<addon id="script.demo-boonex.dolphin" name="A demo browser for demo.boonex.com" version="0.0.1" provider-name="KodiFun">
 		<requires>
 			<import addon="xbmc.python" version="2.14.0"/>
 		</requires>
@@ -28,9 +28,9 @@
 		</extension>
 		<extension point="xbmc.addon.metadata">
 			<platform>all</platform>
-			<summary lang="en">Connect to your favourite dolphin site</summary>
-			<description lang="en">Connect to your favourite dolphin site</description>
-			<disclaimer>Use at your own risk</disclaimer>
+			<summary lang="en">sum Connect to your favourite demo.boonex .com Community site</summary>
+			<description lang="en">des Connect to your favourite demo.boonex .com Community site</description>
+			<disclaimer>Use at your own fun</disclaimer>
 			<license>GNU General Public License, v2</license>
 			<forum></forum>
 			<source></source>
@@ -38,7 +38,7 @@
 			<email>berichtencentrum@mail.com</email>
 		</extension>
 	</addon>
-	<addon id="script.demo-18play.dolphin" name="A demo browser for boonex" version="0.0.1" provider-name="KodiFun">
+	<addon id="script.demo-18play.dolphin" name="A demo browser for demo.18play.be" version="0.0.1" provider-name="KodiFun">
 		<requires>
 			<import addon="xbmc.python" version="2.14.0"/>
 		</requires>
@@ -47,9 +47,9 @@
 		</extension>
 		<extension point="xbmc.addon.metadata">
 			<platform>all</platform>
-			<summary lang="en">Connect to your favourite dolphin site</summary>
-			<description lang="en">Connect to your favourite dolphin site</description>
-			<disclaimer>Use at your own risk</disclaimer>
+			<summary lang="en">sum Connect to your favourite demo.18play.be Community site</summary>
+			<description lang="en">des Connect to your favourite demo.18play.be Community site</description>
+			<disclaimer>Use at your own fun</disclaimer>
 			<license>GNU General Public License, v2</license>
 			<forum></forum>
 			<source></source>
