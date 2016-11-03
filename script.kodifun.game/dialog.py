@@ -14,18 +14,33 @@ __language__  = __settings__.getLocalizedString
 __settings__.getSetting( "foo" ) # this will return "foo" setting value 
 __bLogging__  =__settings__.getSetting("32004")
 
-CTRL_ID_BACKSPACE = 8
+
+#SKIN BUTTONS
+
 CTRL_ID_OK = 32033
 CTRL_ID_CANCEL = 32034
-CTRL_ID_TEXT = 1
-CTRL_ID_IMG = 2
 CTRL_ID_REFRESH = 300
 EXIT_DIALOG = 301
 
-ACTION_PREVIOUS_MENU = (92, 301)
+#KEYBOARD KEYS
 
+ACTION_KEY_LEFT=1
+ACTION_KEY_RIGHT=2
+ACTION_KEY_UP=3
+ACTION_KEY_DOWN=4
+ACTION_KEY_BACKSPACE = 8
+ACTION_KEY_SPACE=12
+ACTION_KEY_TAB=18
+ACTION_PREVIOUS_MENU = (10,92)
 
-class KodifunLogin(xbmcgui.WindowXMLDialog):
+#CEC REMOTE KEYS
+#https://github.com/xbmc/xbmc/blob/master/xbmc/input/ButtonTranslator.cpp
+# CEC_KEY_UP=166
+# CEC_KEY_DOWN=167
+# CEC_KEY_LEFT=168
+# CEC_KEY_RIGHT=169
+
+class KodifunLogin(xbmcgui.WindowXML):
 
     def __init__(self, strXMLname, strFallbackPath, defaultSkin='Default',
                  forceFallback=False):
@@ -34,6 +49,7 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 		# Doing strXMLname = "bah.xml" will not change anything.
 		# don't put GUI sensitive stuff here (as the xml hasn't been read yet
 		# Idea to initialize your variables here
+		self.ControlListIndex=0
 		self.ActionID=0
 		self.input_text = ''
 		self.username = ''
@@ -62,7 +78,7 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 		### make the list
 		# self.ctl = xbmcgui.ControlList(210, 100, 335, 360, 'font14')
 		# self.addControl(self.ctl)
-		# self.setFocus(self.ctl)
+		# self.setFocus(32203)
 
 		#self.AddControl(self.statlist)
 		# self.ListItem = xbmcgui.ListItem(label=str('philip', IconImage = "user.png")
@@ -86,9 +102,13 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 		 if __bLogging__ == "true":xbmc.log("SPY onInit(self) " +str(xbmcgui.getCurrentWindowId()) + " " + self.SkinXML)
 		 if(self.SkinXML == "splash-players.xml"):
 			self.getControl(32203).setText(str(self.players))
+			self.ListControls=[32203,32034,32204]
+			self.setFocusId(32203)
 		 elif(self.SkinXML == "splash-playersdata.xml"):
 			self.getControl(32060).setText(str(__settings__.getSetting(str(32301 + self.counter * self.offsetPlayerData))))
 			self.getControl(32061).setText(str(__settings__.getSetting(str(32302 + self.counter * self.offsetPlayerData))))
+			self.ListControls=[32060,32061,32063,32064,32065,32066,32034,32037]
+			self.setFocusId(32060)
 			if(__settings__.getSetting(str(32303 + self.counter * self.offsetPlayerData)) == "1"):
 				self.getControl(32063).setSelected(1)
 			else:
@@ -99,7 +119,9 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 				self.getControl(32066).setSelected(1)
 			self.getControl(32222).setLabel(str(__language__(32222)+ " " + str(self.counter + 1)))
 		 elif(self.SkinXML == "kodifun-gameboard.xml"):
+			self.ListControls=[32034,32037]
 			if __bLogging__ == "true":xbmc.log("SPY onInit2(self) " +str(xbmcgui.getCurrentWindowId()) + " " + self.SkinXML)
+			self.setFocusId(32039)
 			kodifunattrib.setGameBoard(self)
 			self.counter=0
 			for self.counter in range(0,4):
@@ -113,6 +135,24 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 				self.getControl(32306 + self.counter * self.offsetPlayerData).setImage(str(__settings__.getSetting(str(32303 + self.counter * self.offsetPlayerData))) + str(self.counter + 1) + "PlayerImage.png")
 		
 		 pass
+    def prevControl(self, action):
+		if self.ControlListIndex <= 0: 
+			self.ControlListIndex = len(self.ListControls)-1
+		else:
+			self.ControlListIndex = self.ControlListIndex -1
+		if __bLogging__ == "true":xbmc.log(str(len(self.ListControls)) + " prevControl " + str(self.ListControls[self.ControlListIndex]) + " key: " + str(self.ControlListIndex))
+		self.setFocusId(self.ListControls[self.ControlListIndex])
+		pass
+    def nextControl(self, action):
+		if self.ControlListIndex >= len(self.ListControls)-1: 
+			self.ControlListIndex = 0
+		else:
+			self.ControlListIndex = self.ControlListIndex +1
+		if __bLogging__ == "true":xbmc.log(str(len(self.ListControls)) + " nextControl " + str(self.ListControls[self.ControlListIndex]) + " key: " + str(self.ControlListIndex))
+		self.setFocusId(self.ListControls[self.ControlListIndex])
+
+
+		pass
 
     def get_text(self):
         if self._ok:
@@ -120,11 +160,45 @@ class KodifunLogin(xbmcgui.WindowXMLDialog):
 
     def onAction(self, action):
         # Same as normal python Windows.
+        if __bLogging__ == "true":xbmc.log("onAction =" + str(action.getId()) + "/" )
+        if action.getId() == ACTION_KEY_LEFT :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_KEY_LEFT=" + str(action.getId()) + "/" )
+            self.prevControl(self)
+            return
+        if action.getId() == ACTION_KEY_RIGHT:
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_KEY_RIGHT=" + str(action.getId()) + "/" )
+            self.nextControl(self)
+            return
+        if action.getId() == ACTION_KEY_DOWN :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_KEY_DOWN=" + str(action.getId()) + "/" )
+            self.prevControl(self)
+            return
+        if action.getId() == ACTION_KEY_UP:
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_KEY_UP=" + str(action.getId()) + "/" )
+            self.nextControl(self)
+            return
+		# CEC remote
+        if action.GetButtonCode() == ACTION_MOVE_LEFT  :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_MOVE_LEFT =" + str(action.getId()) + "/" )
+            self.prevControl(self)
+            return
+        if action.getId() == ACTION_MOVE_RIGHT :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_MOVE_LEFT =" + str(action.getId()) + "/" )
+            self.nextControl(self)
+            return
+        if action.GetButtonCode() == ACTION_MOVE_UP  :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_MOVE_LEFT =" + str(action.getId()) + "/" )
+            self.prevControl(self)
+            return
+        if action.getId() == ACTION_MOVE_DOWN :
+            if __bLogging__ == "true":xbmc.log("onAction ACTION_MOVE_LEFT =" + str(action.getId()) + "/" )
+            self.nextControl(self)
+            return
         if action in ACTION_PREVIOUS_MENU:
-            self.close()
+            return
 
         if action == EXIT_DIALOG:
-            self.close()
+            return
 
     def onClick(self, controlID):
         """
