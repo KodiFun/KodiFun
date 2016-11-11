@@ -1,0 +1,141 @@
+<window id="30011">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+	<!-- ============================================= -->
+	<!--   S C R E E N       B A C K G R O U N D       -->          
+	<!-- ============================================= -->              
+  
+	<!-- Copy of CommonBackground -->
+    <control type="image">
+      <description>background image</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <!-- <width>1280</width>
+      <height>720</height> -->
+      <texture>bg2.png</texture>
+    </control>
+	  
+
+    <control type="group" id="9001">
+            <description>Login Settings</description>
+            <posx>600</posx>
+            <posy>250</posy>
+            <width>600</width>
+            <height>500</height>
+            <itemgap>4</itemgap>
+            <onleft>251</onleft>
+            <onright>251</onright>
+            <ondown>9001</ondown>
+            <onup>9001</onup>
+			
+<!--             <control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>1</height>
+				<texture border="20">canvas.png</texture>
+				<colordiffuse>FF999999</colordiffuse>
+			</control>
+			 -->
+<control type="label" id="32035">
+        <description>My First label</description>
+        <left>10</left>
+        <width>500</width>
+        <visible>true</visible>
+        <align>left</align>
+        <scroll>false</scroll>
+        <label>[B]$ADDON[script.kodifun.game 32035][/B]</label>
+        <info>[B]$ADDON[script.kodifun.game 32035][/B]</info>
+        <number></number>
+        <angle>0</angle>
+        <haspath>false</haspath>
+        <font>font16</font>
+        <textcolor>FFFF0000</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <wrapmultiline>false</wrapmultiline>
+        <scrollspeed>50</scrollspeed>
+        <scrollsuffix> - </scrollsuffix>
+  </control>
+			<control type="edit" id="32011">
+				<description>Username box</description>
+				<left>0</left>
+				<posy>50</posy>
+				<width>500</width>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>[B]$ADDON[script.kodifun.game 32011][/B]</label>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+			</control>
+			
+			<control type="edit" id="32012">
+				<description>Password Box</description>
+				<left>0</left>
+				<posy>100</posy>
+				<width>500</width>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>[B]$ADDON[script.kodifun.game 32012][/B]</label>
+				<hinttext></hinttext>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+			</control>
+			<!-- <control type="radiobutton" id=32040>
+				<description>radiobutton control</description>
+				<type>radiobutton</type>
+				<posy>150</posy>
+				<width>200</width>
+				<height>50</height>
+				<visible>true</visible>
+				<label>[B]$ADDON[script.kodifun.game 32012][/B]</label>
+				<font>font14</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<disabledcolor>80FFFFFF</disabledcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+				<onfocus>-</onfocus>
+				<onunfocus>-</onunfocus>
+				<onup>2</onup>
+				<ondown>3</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+			</control> -->
+			
+			
+			<control type="button" id=32033>
+				<left>0</left>
+				<width>180</width>
+				<posy>200</posy>
+				<label>[B]$ADDON[script.kodifun.game 32033][/B]</label>
+				<align>Center</align>
+			</control>
+			
+			<control type="button" id=32034>
+				<posy>200</posy>
+				<left>200</left>
+				<width>180</width>
+				<label>[B]$ADDON[script.kodifun.game 32034][/B]</label>
+			</control>
+		
+
+
+
+            
+        </control>		  
+	</controls>
+</window>

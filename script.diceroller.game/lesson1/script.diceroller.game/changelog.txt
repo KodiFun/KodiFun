@@ -1,0 +1,20 @@
+=== 0.0.1 Development  Release
+	- Build directory and file structure 
+		script.addon.name
+			└changelog-0.0.1.txt
+			└icon.png
+			└script.addon.name-0.0.1.zip
+				└script.addon.name
+					└LICENSE.txt
+					└addon.xml
+					└icon.png
+					└changelog.txt
+					└resources
+						└language
+							└english
+								└strings.xml
+							└dutch
+								└strings.xml
+							└settings.xml
+	- FINISHED: scale and rebrand icon
+	- Build on the hello world example
